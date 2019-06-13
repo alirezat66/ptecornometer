@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkblue"
+    android:orientation="vertical"
+    >
+
+
+      <ImageView
+          android:id="@+id/background"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginTop="16dp"
+          android:contentDescription="@string/background"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@drawable/background" />
+
+      <ImageView
+          android:id="@+id/logo"
+          android:layout_width="64dp"
+          android:layout_height="64dp"
+          android:layout_marginTop="64dp"
+          android:layout_centerHorizontal="true"
+          app:srcCompat="@drawable/logo" />
+
+      <TextView
+          android:id="@+id/title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="24dp"
+          android:layout_below="@id/logo"
+          android:text="Timer"
+          android:textColor="@color/white"
+          android:textSize="23sp"
+          android:layout_centerHorizontal="true"/>
+
+      <ImageView
+          android:id="@+id/line"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:layout_below="@id/title"
+          android:layout_centerHorizontal="true"
+          android:contentDescription="@string/todo"
+
+          app:srcCompat="@drawable/line" />
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:id="@+id/timer_rl"
+          android:layout_below="@id/line">
+
+            <TextView
+                android:id="@+id/hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginRight="8dp"
+                android:text="@string/_01"
+                android:textColor="@android:color/background_light"
+                android:textSize="72sp"
+                />
+            <TextView
+                android:id="@+id/h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/hour"
+                android:layout_centerVertical="true"
+                android:text="@string/h"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/colon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:text="@string/colon"
+                android:textColor="@android:color/background_light"
+
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="@+id/hour"
+                android:layout_toRightOf="@+id/h"
+                 />
+
+            <TextView
+                android:id="@+id/minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/colon1"
+                android:text="@string/_50"
+                android:textColor="@android:color/background_light"
+                android:textSize="72sp"
+                android:visibility="visible"
+                 />
+            <TextView
+                android:id="@+id/colon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:text="@string/colon"
+                android:textColor="@android:color/background_light"
+                android:textSize="36sp"
+                android:layout_toRightOf="@+id/m"
+                 />
+            <TextView
+                android:id="@+id/seconds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/_50"
+                android:textColor="@android:color/background_light"
+                android:textSize="72sp"
+                android:layout_toRightOf="@id/colon2"/>
+
+            <TextView
+                android:id="@+id/m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/minute"
+                android:text="@string/m"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/seconds"
+                android:text="@string/s"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp" />
+      </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <ImageButton
+          android:id="@+id/add"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginLeft="16dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:background="@android:color/transparent"
+          android:contentDescription="@string/todo"
+          android:visibility="gone"
+          app:layout_constraintBottom_toBottomOf="@+id/startButton"
+          app:layout_constraintEnd_toStartOf="@+id/startButton"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/startButton"
+          app:srcCompat="@drawable/plus"
+          />
+
+      <ImageButton
+          android:id="@+id/startButton"
+          android:layout_width="56dp"
+          android:layout_height="56dp"
+          android:layout_marginBottom="8dp"
+          android:layout_marginTop="8dp"
+          android:scaleType="fitXY"
+          android:background="@android:color/transparent"
+          android:contentDescription="@string/todo"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          android:layout_centerVertical="true"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@id/timer_rl"
+          app:layout_constraintRight_toRightOf="parent"
+          app:srcCompat="@drawable/ic_play" />
+
+      <ImageButton
+          android:id="@+id/delete"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginRight="16dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:background="@android:color/transparent"
+          android:contentDescription="@string/todo"
+          android:visibility="gone"
+          app:layout_constraintBottom_toBottomOf="@+id/startButton"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/startButton"
+          app:layout_constraintTop_toTopOf="@+id/startButton"
+          app:srcCompat="@drawable/remove" />
+
+      <TextView
+          android:id="@+id/milli_second"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:layout_marginEnd="8dp"
+          android:visibility="gone"
+          android:layout_marginStart="8dp"
+          android:text="@string/zero"
+          android:textColor="@android:color/white"
+          app:layout_constraintBottom_toTopOf="@+id/startButton"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          />
+
+</RelativeLayout>
