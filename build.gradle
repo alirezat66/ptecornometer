@@ -7,7 +7,11 @@ buildscript {
         
     }
     dependencies {
+<<<<<<< HEAD
         classpath 'com.android.tools.build:gradle:3.4.1'
+=======
+        classpath 'com.android.tools.build:gradle:3.4.0'
+>>>>>>> 44586e83d05b927c35cc2d860ee4e24d2aaf6604
         
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
